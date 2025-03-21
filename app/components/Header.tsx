@@ -50,7 +50,7 @@ const Header = () => {
           </button>
           <Link
             href="#"
-            className="bg-white text-pink-dark px-4 py-2 rounded-lg font-medium hover:bg-pink-light transition-all"
+            className="bg-white text-pink-dark px-4 py-2 rounded-lg font-medium hover:bg-pink-light hover:text-white transition-all"
           >
             Early Bird Registration
           </Link>
@@ -134,7 +134,7 @@ const Header = () => {
           </button>
           <Link
             href="#"
-            className="bg-white text-pink-dark hover:bg-pink-light py-2 px-4 rounded-lg text-center transition-all mt-2"
+            className="bg-white text-pink-dark hover:bg-pink-light hover:text-white py-2 px-4 rounded-lg text-center transition-all mt-2"
           >
             Early Bird Registration
           </Link>

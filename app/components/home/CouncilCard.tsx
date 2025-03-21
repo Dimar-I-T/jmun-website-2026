@@ -65,12 +65,12 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold text-center mb-6 text-pink-dark">
+        <h3 className="text-xl font-bold text-center mb-6 text-pink-dark bg-clip-text font-plus-jakarta">
           {topic}
         </h3>
 
         {/* Status line */}
-        <div className="flex items-center justify-center gap-2 mb-4 font-bold text-red-dark">
+        <div className="flex items-center justify-center gap-2 mb-4 font-bold text-deep-blue">
           <span>{capitalizeFirstLetter(participant)}</span>
           <span>-</span>
           <span className="">{capitalizeFirstLetter(location)}</span>
