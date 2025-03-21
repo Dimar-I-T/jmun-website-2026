@@ -5,11 +5,96 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'BodoniIf';
+  src: url('/fonts/BodoniIfRoman-vmAD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BodoniIf';
+  src: url('/fonts/BodoniIfBold-MVZx.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BodoniIf';
+  src: url('/fonts/BodoniIfItalic-2OEw.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'BodoniIf';
+  src: url('/fonts/BodoniIfBoldItalic-K7dD.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiab.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiai.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiaz.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-bodoni: 'BodoniIf', serif;
+  --font-georgia: 'Georgia', serif;
+  --font-plus-jakarta: 'PlusJakartaSans', sans-serif;
+
+  /* Primary Colors */
+  --color-red-dark: rgb(142, 13, 22);   /* #8E0D16 */
+  --color-red-bright: rgb(252, 53, 28); /* #FC351C */
+  --color-pink-dark: rgb(213, 58, 148); /* #D53A94 */
+  --color-pink-light: rgb(244, 155, 186); /* #F49BBA */
+  --color-deep-blue: #2C3E80; /* The dark blue shade */
+  --color-soft-beige: #E6E2C3; /* The light beige color */
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+
+  /* Border Radius */
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
