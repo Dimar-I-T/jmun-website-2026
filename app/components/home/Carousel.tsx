@@ -21,7 +21,7 @@ type CarouselProps = Readonly<{
 }>;
 
 // Custom arrow components with proper CustomArrowProps typing
-const PrevArrow: React.FC<CustomArrowProps> = ({ onClick, className }) => {
+const PrevArrow: React.FC<CustomArrowProps> = ({ onClick }) => {
   return (
     <button
       type="button"
@@ -34,7 +34,7 @@ const PrevArrow: React.FC<CustomArrowProps> = ({ onClick, className }) => {
   );
 };
 
-const NextArrow: React.FC<CustomArrowProps> = ({ onClick, className }) => {
+const NextArrow: React.FC<CustomArrowProps> = ({ onClick }) => {
   return (
     <button
       type="button"
@@ -96,7 +96,7 @@ export const ImageCarousel: React.FC<CarouselProps> = ({
         </ul>
       </div>
     ),
-    customPaging: (_: number): JSX.Element => <CustomDot />,
+    customPaging: (): JSX.Element => <CustomDot />,
   };
 
   return (
