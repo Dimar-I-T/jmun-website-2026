@@ -55,7 +55,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
           </div>
 
           {/* Social media section */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 font-plus-jakarta">
             <h3 className="text-2xl md:text-3xl font-extrabold mb-2 lg:mb-4 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl">
               Social Media
             </h3>
@@ -92,7 +92,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
           </div>
 
           {/* Location */}
-          <div className="text-center">
+          <div className="text-center font-plus-jakarta">
             <h3 className="text-2xl md:text-3xl font-extrabold mb-2 lg:mb-4 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl">
               Location
             </h3>
@@ -105,7 +105,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
       </div>
 
       {/* Copyright section - optional addition */}
-      <div className="w-full text-white py-4 text-center">
+      <div className="w-full text-white py-4 text-center font-plus-jakarta">
         <p>© {new Date().getFullYear()} ISAFIS. All rights reserved.</p>
       </div>
     </footer>
