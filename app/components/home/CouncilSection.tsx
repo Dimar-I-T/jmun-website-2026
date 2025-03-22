@@ -4,7 +4,7 @@ import CouncilCard from "./CouncilCard";
 
 function CouncilSection() {
   return (
-    <section className="w-full bg-gradient-to-b bg-red-dark flex flex-col items-center justify-start py-12 px-10">
+    <section className="w-full bg-gradient-to-b from-red-bright to-red-dark flex flex-col items-center justify-start py-12 px-10">
       <h2 className="font-plus-jakarta font-extrabold text-3xl md:text-5xl text-white drop-shadow-2xl text-center">
         Councils
       </h2>

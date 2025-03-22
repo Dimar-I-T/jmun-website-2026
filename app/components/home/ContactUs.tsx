@@ -30,27 +30,39 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
               <h3 className="md:text-3xl font-extrabold mb-2 md:mb-4 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-lg">
                 General Queries
               </h3>
-              <p className="text-white text-sm md:text-base">
-                delrel.jmun@isafis.or.id
-              </p>
+              <a
+                href="mailto:jakartamun@isafis.or.id"
+                target="_blank"
+                className="text-white text-sm md:text-base"
+              >
+                jakartamun@isafis.or.id
+              </a>
             </div>
 
             <div>
               <h3 className="md:text-3xl font-extrabold mb-2 md:mb-4 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-lg">
                 Sponsorship
               </h3>
-              <p className="text-white text-sm md:text-base">
-                publicaffairs.jmun@isafis.or.id
-              </p>
+              <a
+                href="mailto:jakartamun@isafis.or.id"
+                target="_blank"
+                className="text-white text-sm md:text-base"
+              >
+                jakartamun@isafis.or.id
+              </a>
             </div>
 
             <div>
               <h3 className="md:text-3xl font-extrabold mb-2 md:mb-4 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-lg">
                 Media Partnership
               </h3>
-              <p className="text-white text-sm md:text-base">
+              <a
+                href="mailto:publicaffairs.jmun@isafis.or.id"
+                target="_blank"
+                className="text-white text-sm md:text-base"
+              >
                 publicaffairs.jmun@isafis.or.id
-              </p>
+              </a>
             </div>
           </div>
 

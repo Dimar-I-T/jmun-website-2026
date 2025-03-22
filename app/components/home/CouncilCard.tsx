@@ -7,7 +7,7 @@ type CouncilCardProps = Omit<Council, "description">;
 function CouncilLevelBadge({ level }: { level: CouncilLevel }) {
   if (level === "beginner") {
     return (
-      <span className="bg-green-800 rounded-lg px-1.5 py-0.5">
+      <span className="rounded-lg px-1.5 py-0.5">
         {capitalizeFirstLetter(level)}
       </span>
     );
@@ -15,14 +15,14 @@ function CouncilLevelBadge({ level }: { level: CouncilLevel }) {
 
   if (level === "intermediate") {
     return (
-      <span className="bg-yellow-200 rounded-lg px-1.5 py-0.5">
+      <span className="rounded-lg px-1.5 py-0.5">
         {capitalizeFirstLetter(level)}
       </span>
     );
   }
 
   return (
-    <span className="bg-red-800 rounded-lg px-1.5 py-0.5">
+    <span className="rounded-lg px-1.5 py-0.5">
       {capitalizeFirstLetter(level)}
     </span>
   );
@@ -37,12 +37,15 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
   location,
 }) => {
   return (
-    <div className="rounded-xl overflow-hidden w-full md:max-w-md cursor-pointer transition-transform duration-300 hover:scale-105">
+    <article className="rounded-xl overflow-hidden w-full md:max-w-md cursor-pointer transition-transform duration-300 hover:scale-105">
       {/* Gradient background */}
-      <div className="bg-gradient-to-r from-pink-light to-soft-beige p-8 flex flex-col items-center text-white h-full w-full">
+      <div className="bg-gradient-to-b from-soft-beige to-pink-light p-8 flex flex-col items-center text-white h-full w-full">
         {/* Organization/Logo section */}
         <div className="mb-6 text-center">
-          <h3 className="text-3xl font-extrabold font-plus-jakarta bg-gradient-to-r from-red-dark to-pink-light bg-clip-text text-transparent mb-4">
+          <h3
+            className="text-3xl font-extrabold font-bodoni
+           bg-gradient-to-r from-red-dark to-pink-dark bg-clip-text text-transparent mb-4"
+          >
             {organization}
           </h3>
           {logo ? (
@@ -65,12 +68,13 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-center mb-6 text-pink-dark bg-clip-text font-plus-jakarta">
+        <h4 className="text-xl font-bold text-center mb-6 bg-clip-text font-bodoni bg-gradient-to-r from-red-dark to-pink-dark text-transparent drop-shadow-2xl">
           {topic}
-        </h3>
+        </h4>
+        <div className="grow"></div>
 
         {/* Status line */}
-        <div className="flex items-center justify-center gap-2 mb-4 font-bold text-deep-blue">
+        <div className="flex items-center justify-center gap-2 mb-4 font-bold text-white font-plus-jakarta text-lg">
           <span>{capitalizeFirstLetter(participant)}</span>
           <span>-</span>
           <span className="">{capitalizeFirstLetter(location)}</span>
@@ -81,14 +85,13 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
             </>
           )}
         </div>
-        <div className="grow"></div>
 
         {/* View More button */}
-        <button className="font-medium text-lg hover:underline">
-          View More
+        <button className="font-medium font-plus-jakarta text-lg hover:font-bold cursor-pointer">
+          View More {">"}
         </button>
       </div>
-    </div>
+    </article>
   );
 };
 
