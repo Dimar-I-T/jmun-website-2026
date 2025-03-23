@@ -74,17 +74,11 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
         <div className="grow"></div>
 
         {/* Status line */}
-        <div className="flex items-center justify-center gap-2 mb-4 font-bold text-white font-plus-jakarta text-lg">
-          <span>{capitalizeFirstLetter(participant)}</span>
-          <span>-</span>
-          <span className="">{capitalizeFirstLetter(location)}</span>
-          {!level ? null : (
-            <>
-              <span>-</span>
-              <CouncilLevelBadge level={level} />
-            </>
-          )}
-        </div>
+        <p className="flex items-center justify-center gap-2 mb-4 font-bold text-white font-plus-jakarta text-lg">
+          {capitalizeFirstLetter(participant)} -{" "}
+          {capitalizeFirstLetter(location)}{" "}
+          {!level ? null : `- ${capitalizeFirstLetter(level)}`}
+        </p>
 
         {/* View More button */}
         <a
