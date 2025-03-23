@@ -18,6 +18,10 @@ const Header = () => {
   function toggleMobileMenu() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }
+
+  function closeMobileMenu() {
+    setIsMobileMenuOpen(false);
+  }
   return (
     <header className="bg-white/0 text-white py-6 px-4 md:px-8 w-full backdrop-blur-2xl fixed top-0 left-0 right-0 z-50 flex flex-col items-center justify-start">
       <div className="container flex items-center justify-between">
@@ -39,14 +43,14 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-8 font-plus-jakarta">
           <Link
             href="/about"
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
             className="hover:scale-105 transition-all"
           >
             About
           </Link>
           <Link
             href="/councils"
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
             className="hover:scale-105 transition-all"
           >
             Councils
@@ -119,12 +123,13 @@ const Header = () => {
         <div className="w-full flex flex-col gap-4 bg-transparent">
           <Link
             href="/about"
+            onClick={closeMobileMenu}
             className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
             About
           </Link>
           <Link
-            onClick={toggleMobileMenu}
+            onClick={closeMobileMenu}
             href="/councils"
             className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
