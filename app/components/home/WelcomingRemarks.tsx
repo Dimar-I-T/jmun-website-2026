@@ -7,7 +7,7 @@ function WelcomingRemarks() {
       <h2 className="font-plus-jakarta font-extrabold text-3xl md:text-5xl text-white drop-shadow-2xl text-center">
         Secretary General Remarks
       </h2>
-      <div className="flex flex-col lg:flex-row items-start justify-center gap-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8">
         <div className="relative rounded-full overflow-hidden h-64 w-64 shadow-inner drop-shadow-2xl">
           {/* Sample image - replace with your own image or use as a component that accepts an image prop */}
           <img

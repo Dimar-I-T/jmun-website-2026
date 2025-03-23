@@ -1,5 +1,5 @@
 import { Council, CouncilLevel } from "@/types";
-import { capitalizeFirstLetter } from "@/utils";
+import { capitalizeFirstLetter, changeDelimiter } from "@/utils";
 import React from "react";
 
 type CouncilCardProps = Omit<Council, "description">;
@@ -87,9 +87,12 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
         </div>
 
         {/* View More button */}
-        <button className="font-medium font-plus-jakarta text-lg hover:font-bold cursor-pointer">
+        <a
+          href={`/councils#${changeDelimiter(organization.toLowerCase())}`}
+          className="font-medium font-plus-jakarta text-lg hover:font-bold cursor-pointer"
+        >
           View More {">"}
-        </button>
+        </a>
       </div>
     </article>
   );

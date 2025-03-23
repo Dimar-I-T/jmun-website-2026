@@ -23,7 +23,11 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="text-xl font-semibold">
+          <Link
+            href="/"
+            onClick={toggleMobileMenu}
+            className="text-xl font-semibold"
+          >
             <Image
               src={"/top-logo.png"}
               alt="Logo of Jakarta MUN"
@@ -37,10 +41,18 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 font-plus-jakarta">
-          <Link href="/about" className="hover:scale-105 transition-all">
+          <Link
+            href="/about"
+            onClick={toggleMobileMenu}
+            className="hover:scale-105 transition-all"
+          >
             About
           </Link>
-          <Link href="/councils" className="hover:scale-105 transition-all">
+          <Link
+            href="/councils"
+            onClick={toggleMobileMenu}
+            className="hover:scale-105 transition-all"
+          >
             Councils
           </Link>
           {/* <a href="#" className="hover:scale-105 transition-all">
@@ -110,12 +122,14 @@ const Header = () => {
       >
         <div className="w-full flex flex-col gap-4 bg-transparent">
           <Link
+            onClick={toggleMobileMenu}
             href="/about"
             className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
             About
           </Link>
           <Link
+            onClick={toggleMobileMenu}
             href="/councils"
             className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
