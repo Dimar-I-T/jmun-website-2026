@@ -1,32 +1,8 @@
-import { Council, CouncilLevel } from "@/types";
+import { Council } from "@/types";
 import { capitalizeFirstLetter, changeDelimiter } from "@/utils";
 import React from "react";
 
 type CouncilCardProps = Omit<Council, "description">;
-
-function CouncilLevelBadge({ level }: { level: CouncilLevel }) {
-  if (level === "beginner") {
-    return (
-      <span className="rounded-lg px-1.5 py-0.5">
-        {capitalizeFirstLetter(level)}
-      </span>
-    );
-  }
-
-  if (level === "intermediate") {
-    return (
-      <span className="rounded-lg px-1.5 py-0.5">
-        {capitalizeFirstLetter(level)}
-      </span>
-    );
-  }
-
-  return (
-    <span className="rounded-lg px-1.5 py-0.5">
-      {capitalizeFirstLetter(level)}
-    </span>
-  );
-}
 
 const CouncilCard: React.FC<CouncilCardProps> = ({
   topic,
