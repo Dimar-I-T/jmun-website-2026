@@ -31,11 +31,11 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
                 General Queries
               </h3>
               <a
-                href="mailto:jakartamun@isafis.or.id"
+                href="mailto:jakartamun@gmail.com"
                 target="_blank"
                 className="text-white text-sm md:text-base"
               >
-                jakartamun@isafis.or.id
+                jakartamun@gmail.com
               </a>
             </div>
 
