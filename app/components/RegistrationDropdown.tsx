@@ -38,7 +38,7 @@ const RegistrationDropdown = () => {
         onClick={handleClick}
         className="bg-white text-pink-dark hover:bg-pink-light hover:text-white py-2 px-4 rounded-lg text-center transition-all mt-2 flex items-center cursor-pointer"
       >
-        Early Bird Registration
+        Registration
         <svg
           className={`ml-2 w-4 h-4 transition-transform ${
             isOpen ? "rotate-180" : ""
