@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import RegistrationDropdown from "./RegistrationDropdown";
 import useBreakpoint from "use-breakpoint";
 import { BREAKPOINTS } from "@/utils";
 
@@ -65,19 +64,19 @@ const Header = () => {
           >
             Councils
           </Link>
-          {/* <a href="#" className="hover:scale-105 transition-all">
-            Press Articles
-          </a>
-          <a href="#" className="hover:scale-105 transition-all">
-            JMUN Scholarship
-          </a> */}
+          <Link
+            href="/registration"
+            onClick={closeMobileMenu}
+            className="hover:scale-105 transition-all"
+          >
+            Registration
+          </Link>
           <button
             onClick={handleContactUsClick}
             className="hover:scale-105 transition-all cursor-pointer"
           >
             Contact Us
           </button>
-          <RegistrationDropdown />
         </div>
 
         {/* Mobile Burger Menu Button */}
@@ -140,25 +139,19 @@ const Header = () => {
           >
             Councils
           </Link>
-          {/* <a
-            href="#"
+          <Link
+            href="/registration"
+            onClick={closeMobileMenu}
             className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
-            Press Articles
-          </a>
-          <a
-            href="#"
-            className="text-white py-2 hover:text-gray-300 transition-all transform hover:translate-x-2"
-          >
-            JMUN Scholarship
-          </a> */}
+            Registration
+          </Link>
           <button
             onClick={handleContactUsClick}
             className="text-white py-2 text-left hover:text-gray-300 transition-all transform hover:translate-x-2"
           >
             Contact Us
           </button>
-          <RegistrationDropdown />
         </div>
       </div>
     </header>

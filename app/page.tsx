@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import HeaderPhoto from "./components/home/HeaderPhoto";
 import CouncilSection from "./components/home/CouncilSection";
 import WelcomingRemarks from "./components/home/WelcomingRemarks";
@@ -23,6 +24,15 @@ function HomePage() {
           <p className="font-medium text-lg  md:text-3xl animate-fade-in opacity-0">
             Hybrid
           </p>
+
+          <div className="mt-8 animate-fade-in opacity-0">
+            <Link
+              href="/registration"
+              className="inline-block bg-red-bright hover:bg-red-dark transition-colors duration-300 text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-lg text-lg md:text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              Register Now
+            </Link>
+          </div>
         </div>
       </HeaderPhoto>
       <WelcomingRemarks />
