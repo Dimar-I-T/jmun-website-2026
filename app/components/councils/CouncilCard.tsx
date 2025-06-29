@@ -7,10 +7,7 @@ interface CouncilCardProps {
   nextOrganization?: string;
 }
 
-const CouncilCard: React.FC<CouncilCardProps> = ({
-  council,
-  nextOrganization,
-}) => {
+const CouncilCard: React.FC<CouncilCardProps> = ({ council }) => {
   const {
     topic,
     logo,
@@ -25,7 +22,10 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
   };
 
   return (
-    <div className="w-full rounded-lg overflow-hidden">
+    <div
+      className="w-full rounded-lg overflow-hidden"
+      id={changeDelimiter(organization.toLowerCase())}
+    >
       {/* Top row: image and title section */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 pb-0">
         <div className="flex-1 flex flex-col justify-center gap-2">
@@ -54,12 +54,12 @@ const CouncilCard: React.FC<CouncilCardProps> = ({
       </div>
       {/* Description below, full width */}
       <div className="w-full px-6 pb-6 pt-4">
-        {!!nextOrganization && (
-          <div id={changeDelimiter(nextOrganization.toLowerCase())}></div>
-        )}
         <p className="text-white leading-relaxed font-plus-jakarta lg:text-lg text-justify">
           {description}
         </p>
+        {/* {!!nextOrganization && (
+          <div id={changeDelimiter(nextOrganization.toLowerCase())}></div>
+        )} */}
       </div>
     </div>
   );

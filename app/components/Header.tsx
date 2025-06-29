@@ -21,14 +21,6 @@ const Header = () => {
     }
   }, [breakpoint.breakpoint]);
 
-  function handleContactUsClick() {
-    const contactUsHeader = document.querySelector("#contact-us-header");
-    if (!contactUsHeader) return;
-
-    contactUsHeader.scrollIntoView({ behavior: "smooth", block: "center" });
-    setIsMobileMenuOpen(false);
-  }
-
   function toggleMobileMenu() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   }
