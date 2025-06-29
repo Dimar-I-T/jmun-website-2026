@@ -1,5 +1,5 @@
 import { Council, CouncilParticipant } from "@/types";
-import { capitalizeFirstLetter, changeDelimiter } from "@/utils";
+import { capitalizeFirstLetter } from "@/utils";
 import Image from "next/image";
 
 interface CouncilCardProps {
@@ -22,21 +22,18 @@ const CouncilCard: React.FC<CouncilCardProps> = ({ council }) => {
   };
 
   return (
-    <div
-      className="w-full rounded-lg overflow-hidden"
-      id={changeDelimiter(organization.toLowerCase())}
-    >
+    <div className="w-full rounded-lg overflow-hidden">
       {/* Top row: image and title section */}
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 pb-0">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 lg:p-6 pb-0">
         <div className="flex-1 flex flex-col justify-center gap-2">
-          <h2 className="text-4xl lg:text-6xl font-extrabold font-bodoni text-white">
+          <h2 className="text-3xl lg:text-6xl font-extrabold font-bodoni text-white">
             {organization}
           </h2>
-          <p className="text-white font-bold text-3xl font-bodoni">
+          <p className="text-white font-bold text-lg lg:text-3xl font-bodoni">
             Council Type: {capitalizeFirstLetter(level)} -{" "}
             {formatParticipant(participant)}
           </p>
-          <p className="font-bodoni font-bold text-2xl lg:text-4xl">
+          <p className="font-bodoni font-bold text-xl lg:text-4xl">
             &quot;{topic}&quot;
           </p>
         </div>
@@ -53,13 +50,10 @@ const CouncilCard: React.FC<CouncilCardProps> = ({ council }) => {
         </div>
       </div>
       {/* Description below, full width */}
-      <div className="w-full px-6 pb-6 pt-4">
+      <div className="w-full lg:px-6 lg:pb-6 pt-4">
         <p className="text-white leading-relaxed font-plus-jakarta lg:text-lg text-justify">
           {description}
         </p>
-        {/* {!!nextOrganization && (
-          <div id={changeDelimiter(nextOrganization.toLowerCase())}></div>
-        )} */}
       </div>
     </div>
   );

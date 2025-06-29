@@ -101,9 +101,9 @@ const Header = () => {
               }`}
             >
               <div className="py-2">
-                {councils.map((council, index) => (
+                {councils.map((council) => (
                   <Link
-                    key={index}
+                    key={council.organization}
                     href={`/councils#${council.organization
                       .toLowerCase()
                       .replace(/\s+/g, "-")}`}
@@ -258,9 +258,9 @@ const Header = () => {
               }`}
             >
               <div className="flex flex-col gap-1 py-2">
-                {councils.map((council, index) => (
+                {councils.map((council) => (
                   <Link
-                    key={index}
+                    key={council.organization}
                     href={`/councils#${council.organization
                       .toLowerCase()
                       .replace(/\s+/g, "-")}`}
