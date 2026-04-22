@@ -1,60 +1,65 @@
 import React from "react";
 import ContactUs from "../components/about/ContactUs";
+import Image from "next/image";
 
 function AboutPage() {
   return (
-    <main className="flex flex-col items-center justify-start w-full bg-gradient-to-b from-red-bright to-pink-dark min-h-screen pt-28 md:pt-40">
-      <div className="max-w-7xl px-8 flex flex-col w-full gap-6">
-        <section className="flex flex-col items-center justify-start gap-4">
-          <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-soft-beige to-pink-light font-extrabold text-4xl md:text-7xl text-center font-plus-jakarta drop-shadow-2xl">
-            ABOUT JMUN Test
-          </h1>
-          <p className="text-white font-plus-jakarta text-justify font-medium md:text-lg">
-            Jakarta Model United Nations (<strong>“JMUN”</strong>) is
-            Indonesia&apos;s largest international Model United Nations (
-            <strong>“MUN”</strong>) conference, which was first conducted by
-            ISAFIS in Jakarta in 2011. JMUN allows members to engage in the
-            difficulties of international negotiation and diplomacy.
-            Participants discuss global issues in a setting that simulates the
-            processes of a United Nations conference while acting as
-            representatives of their assigned countries. This experience
-            provides delegates with important insights into the UN&apos;s
-            functioning while actively contributing to the resolution of
-            critical international concerns.
-          </p>
-        </section>
-        <section className="flex flex-col items-center justify-start gap-4">
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-soft-beige to-pink-light font-extrabold text-4xl md:text-7xl text-center font-plus-jakarta drop-shadow-2xl">
-            GRAND THEME
-          </h2>
-          <p className="text-white font-plus-jakarta text-justify font-medium md:text-lg">
-            Jakarta International Model United Nations or JMUN 2025 brings the
-            fresh theme titled{" "}
-            <strong>
-              A Turning Point in Time: Changing the Global Status Quo to Forge a
-              Unified Future.
-            </strong>
-            This theme is brought to people not merely from interest, but also
-            with concern and clear purpose that is aligned with JMUN values.
-            This theme redefines the concept of legacy, emphasizing that though
-            acknowledging that heritage and history must be upheld to preserve
-            cultural richness and unity, not all traditions and systems deserve
-            to endure. It challenges the notion of upholding inequality,
-            mistreatment, or outdated norms simply because they are
-            longstanding.{" "}
-          </p>
-        </section>
-        <section className="flex flex-col items-center justify-start gap-4">
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-soft-beige to-pink-light font-extrabold text-4xl md:text-7xl text-center font-plus-jakarta drop-shadow-2xl">
-            TAGLINE
-          </h2>
-          <h3 className="text-transparent bg-clip-text pb-4 bg-gradient-to-b from-soft-beige to-pink-light font-extrabold text-xl md:text-4xl text-center font-plus-jakarta drop-shadow-2xl">
-            - Leading the Change -
-          </h3>
-          <p></p>
-        </section>
-        <div className="border-b-2 border-white w-full"></div>
+    <main className="relative flex flex-col items-center justify-start w-full bg-gradient-to-b from-[#A6DBAB] to-[#045A77] min-h-screen pt-28 md:pt-33">
+
+      <div className="absolute opacity-50 left-[-13vw] top-[-13vw] z-10">
+        <Image
+          src="/bunga-kiri-atas.png"
+          alt="logo"
+          width={1783}
+          height={2072}
+          className="w-[68.292vw] aspect-[1783/2072]"
+          priority
+          unoptimized
+        />
       </div>
+
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/bg-batik.png')",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "100% auto",
+          backgroundPosition: "top center"
+        }}
+      />
+
+      <div className="relative w-full h-auto md:px-15 max-sm:mt-[-25px] z-10">
+        <div className="relative w-full h-auto bg-biru-1/65 rounded-4xl flex flex-col pt-3 px-12 pb-5 max-md:px-6 scale-90">
+          <Image
+            src="/bunga-kanan-atas.png"
+            alt="logo"
+            width={920}
+            height={863}
+            className="absolute w-[15.625vw] aspect-[863/960] top-[-4vw] right-[-3vw] rotate-90"
+            priority
+            unoptimized
+          />
+
+          <h1 className="text-[68px] max-md:text-[40px] md:mb-[-10px] font-bold text-biru-3 font-bodoni">
+            About JMUN
+          </h1>
+          <p className="text-[20px] max-md:text-[13px] text-justify font-light text-biru-3 font-montserrat">
+            Jakarta International Model United Nations stands as one of the most prestigious international Model United Nations (MUN) events hosted in Jakarta, Indonesia's vibrant capital. As the conference enters its 16th annual edition, Jakarta International Model United Nations continues to uphold its commitment to academic excellence, extending beyond traditional learning to provide opportunities for skill-building, networking, and personal growth for all participants. At Jakarta International Model United Nations, delegates representing assigned countries engage in debates on pressing global issues, mirroring the structure and essence of a United Nations (UN) conference. Through active participation in discussions, delegates will gain valuable insights into the workings of the UN while collaboratively striving to develop
+            resolutions for critical global issues.
+          </p>
+
+          <h1 className="text-[68px] max-md:text-[40px] text-right w-full font-bold text-biru-3 font-bodoni md:mt-[-10px] md:mb-[-10px]">
+            Grand Theme
+          </h1>
+          <p className="text-[20px] max-md:text-[13px] text-justify font-light text-biru-3 font-montserrat z-10">
+            Jakarta International Model United Nations (JMUN) 2026 reinforce the theme <span className="font-extrabold">Restoring the Path to Tranquility: Reconstructing the Blueprint of Peace and Justice Within the Global Architecture</span>.This theme highlights the urgency of taking action in the present amid overlapping and ongoing crises, rather than focusing solely on future plans. Reconstructing the blueprint is one of the approaches to bring harmony to light and to reach global peace and justice starting with the actions taken today.
+          </p>
+          <h1 className="text-[42px] max-md:text-[30px] text-center font-bold text-biru-3 font-bodoni italic z-10">
+            #RestoringThePath
+          </h1>
+        </div>
+      </div>
+
       <ContactUs />
     </main>
   );
