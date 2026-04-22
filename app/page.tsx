@@ -36,22 +36,22 @@ function HomePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 w-full min-h-screen px-4 sm:px-6 md:px-12 pt-20 flex flex-col items-center justify-center">
+        <div className="relative z-10 w-full min-h-screen px-4 sm:px-6 md:px-12 pt-35 flex flex-col items-center justify-center">
           
-          <div className="w-full max-w-[1150px] flex flex-col items-center">
+          <div className="w-full max-w-[1250px] flex flex-col items-center">
             
-            <div className="w-full rounded-[1.5rem] md:rounded-[2rem] bg-white/50  px-6 md:px-10 lg:px-10 py-11">
-              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-4">
+            <div className="w-full rounded-[1.75rem] md:rounded-[2.25rem] bg-white/50 px-7 md:px-12 lg:px-12 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-9 md:gap-5">
                 
                 <div className="flex flex-col items-start justify-center">
                   <Image
                     src={heroTitle}
                     alt="Jakarta International Model United Nations 2026"
                     priority
-                    className="max-w-none sm:w-[250px] md:w-[500px] lg:w-[650px] h-auto"
+                    className="max-w-none sm:w-[250px] md:w-[500px] lg:w-[700px] h-auto"
                   />
-                  <div className="ml-30">
-                    <p className="mt-1 md:mt-2 text-[#025470] italic font-light leading-tight text-base md:text-lg lg:text-2xl w-[550px]">
+                  <div className="ml-29">
+                    <p className="mt-1 md:mt-2 text-[#025470] italic font-light leading-tight text-base md:text-lg lg:text-[28px] w-[650px]">
                       Restoring the Path to Tranquility: Reconstructing the
                       Blueprint of Peace and Justice Within the Global
                       Architecture
@@ -66,12 +66,12 @@ function HomePage() {
                   </div>
                 </div>
 
-                <div className="w-full flex items-center justify-center md:justify-end ml-20 -mb-19">
+                <div className="w-full flex items-center justify-center md:justify-end ml-20 -mb-20">
                   <Image
                     src={patungDirgantara}
                     alt="Patung Dirgantara illustration"
                     priority
-                    className="max-w-none sm:w-[150px] md:w-[300px] lg:w-[530px] h-auto object-contain"
+                    className="max-w-none sm:w-[150px] md:w-[300px] lg:w-[575px] h-auto object-contain"
                   />
                 </div>
               </div>
@@ -82,7 +82,7 @@ function HomePage() {
                 Jl. Joe Klp. Tiga No. 56, RT. 07/RW. 03, Lenteng Agung, Kec.Jagakarsa, Kota Jakarta Selatan, DKI Jakarta, 12250.
               </p>
               <p className="mt-1 text-xs md:text-sm font-light">
-                © 2026 ISAFIS. All rights reversed
+                © 2026 ISAFIS. All rights reserved
               </p>
             </div>
             
