@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'BodoniIf';
   src: url('/fonts/BodoniIfRoman-vmAD.ttf') format('truetype');
   font-weight: normal;
@@ -149,6 +156,7 @@
   --font-georgia: 'Georgia', serif;
   --font-plus-jakarta: 'PlusJakartaSans', sans-serif;
   --font-cormorant-garamond: 'CormorantGaramond', serif;
+  --font-montserrat: 'Montserrat', serif;
 
   /* Primary Colors */
   --color-red-dark: rgb(142, 13, 22);   /* #8E0D16 */
@@ -159,6 +167,15 @@
   --color-soft-beige: #E6E2C3; /* The light beige color */
   --color-red-medium: #cf2c2c; /* #FC351C */
   --color-pink-medium: #ff89e0; /* #F49BBA */
+
+  /* jmun 2026 */
+  --color-biru-1: #C3EAE9;
+  --color-ijo-muda: #A6DDA6;
+  --color-biru-2: #1E9CC2;
+  --color-orange: #F06E54;
+  --color-kuning: #F2CB55;
+  --color-cream: #FFF2E3;
+  --color-biru-3: #025471;
 
   /* Typography */
   --font-sans: 'Inter', sans-serif;
