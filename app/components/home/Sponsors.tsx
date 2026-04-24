@@ -94,7 +94,7 @@ function SponsorLogo({ name, logo, tier }: SponsorLogoProps) {
 }
 function Sponsors() {
     return (
-        <section className="w-full flex flex-col items-center justify-start pt-28 md:pt-33 px-10">
+        <section className="w-full flex flex-col items-center justify-start pt-5 md:pt-10 px-10">
             <section className="w-full flex flex-col items-center justify-start pt-16 md:pt-20 px-10">
                 <h2 className="font-bodoni font-bold text-5xl md:text-7xl text-biru-3">
                     Our Sponsors
