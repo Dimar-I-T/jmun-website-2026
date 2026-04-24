@@ -6,9 +6,11 @@ import WelcomingRemarks from "./components/home/WelcomingRemarks";
 import ContactUs from "./components/home/ContactUs";
 import GallerySection from "./components/home/GallerySection";
 import Sponsors from "./components/home/Sponsors";
-import heroBackground from "@/assets/HeroBackground.svg";
+import HomeBackground from "@/assets/HomeBackground.png";
 import heroTitle from "@/assets/HeroTitle.svg";
 import patungDirgantara from "@/assets/PatungDirgantara.svg";
+import EllipseKuning from "@/assets/EllipseKuning.png";
+import MobileViewportOverride from "./components/MobileScaler";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,30 +21,43 @@ const montserrat = Montserrat({
 function HomePage() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-start">
-      <section
-        className={`relative w-full min-h-screen overflow-hidden ${montserrat.className}`}
-      >
+      {/* Override viewport on mobile to force desktop layout */}
+      <MobileViewportOverride />
+
+      {/* Fixed background — locked to viewport, content scrolls over it */}
+      <div className="fixed inset-0 -z-10" aria-hidden="true">
         <Image
-          src={heroBackground}
+          src={HomeBackground}
           alt=""
           fill
           priority
           className="object-cover"
-          aria-hidden="true"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f7f98]/45" />
+      </div>
 
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f7f98]/45"
-          aria-hidden="true"
-        />
+      <section
+        className={`relative w-full min-h-[700px] ${montserrat.className}`}
+      >
 
-        <div className="relative z-10 w-full min-h-screen px-4 sm:px-6 md:px-12 pt-35 flex flex-col items-center justify-center">
-          
-          <div className="w-full max-w-[1250px] flex flex-col items-center">
-            
-            <div className="w-full rounded-[1.75rem] md:rounded-[2.25rem] bg-white/50 px-7 md:px-12 lg:px-12 py-12">
+        <div className="relative z-10 w-full min-h-[725px] px-4 sm:px-6 md:px-12 sm:pt-1 md:pt-28 flex flex-col items-center justify-center">
+
+          <div className="w-[1100px] lg:w-full max-w-[1250px] flex flex-col items-center">
+
+            <div className="absolute opacity-50 left-[-13vw] top-[-13vw] -z-10">
+              <Image
+                src="/bunga-kiri-atas.png"
+                alt="logo"
+                width={1783}
+                height={2072}
+                className="w-[58vw] aspect-[1783/2072]"
+                priority
+                unoptimized
+              />
+            </div>
+            <div className="w-full rounded-[1.75rem] md:rounded-[2.25rem] bg-white/50 px-5 py-12 [clip-path:inset(-100vw_-100vw_0_-100vw)] scale-100 [[data-is-mobile=true]_&]:scale-95">
               <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-9 md:gap-5">
-                
+
                 <div className="flex flex-col items-start justify-center">
                   <Image
                     src={heroTitle}
@@ -66,30 +81,28 @@ function HomePage() {
                   </div>
                 </div>
 
-                <div className="w-full flex items-center justify-center md:justify-end ml-20 -mb-20">
-                  <Image
-                    src={patungDirgantara}
-                    alt="Patung Dirgantara illustration"
-                    priority
-                    className="max-w-none sm:w-[150px] md:w-[300px] lg:w-[575px] h-auto object-contain"
-                  />
+                <div className="w-full flex items-center justify-center md:justify-end ml-20 -mb-40">
+                  <div className="relative">
+                    <Image
+                      src={EllipseKuning}
+                      alt=""
+                      className="absolute top-[15%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[50%] h-auto -z-10 opacity-100"
+                    />
+                    <Image
+                      src={patungDirgantara}
+                      alt="Patung Dirgantara illustration"
+                      priority
+                      className="max-w-none sm:w-[70px] md:w-[150px] lg:w-[520px] h-auto object-contain scale-x-[-1]"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-2 text-center text-white italic leading-relaxed px-4">
-              <p className="text-xs md:text-sm font-light w-160">
-                Jl. Joe Klp. Tiga No. 56, RT. 07/RW. 03, Lenteng Agung, Kec.Jagakarsa, Kota Jakarta Selatan, DKI Jakarta, 12250.
-              </p>
-              <p className="mt-1 text-xs md:text-sm font-light">
-                © 2026 ISAFIS. All rights reserved
-              </p>
-            </div>
-            
           </div>
         </div>
       </section>
-      
+
       <WelcomingRemarks />
       <GallerySection />
       <Sponsors />
