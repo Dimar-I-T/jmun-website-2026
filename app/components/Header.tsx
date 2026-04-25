@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { councils } from "@/data/council";
 import { IoChevronDown } from "react-icons/io5";
 
@@ -11,6 +11,25 @@ const Header = () => {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   
   const sidebarRef = useRef<HTMLElement>(null);
+  
+  // Ref to store our timer so we can pause/cancel it
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Helper to clear the timer (keeps sidebar open)
+  const cancelCloseTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  }, []);
+
+  // Helper to start the 2-second countdown
+  const startCloseTimer = useCallback(() => {
+    cancelCloseTimer(); // Clear any existing timers first to prevent overlap
+    timerRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 1000);
+  }, [cancelCloseTimer]);
 
   // 1. Click-outside handler
   useEffect(() => {
@@ -23,22 +42,18 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // 2. Auto-hide timer: Closes the sidebar after 2 seconds (2000ms)
+  // 2. Manage the timer automatically when `isOpen` state changes
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    
     if (isOpen) {
-      timeoutId = setTimeout(() => {
-        setIsOpen(false);
-      }, 2000);
+      // Start the countdown when it opens...
+      startCloseTimer();
+    } else {
+      // Clean up the timer if it gets closed manually or via click-outside
+      cancelCloseTimer();
     }
 
-    // Cleanup function clears the timer if the component unmounts 
-    // or if the sidebar is closed manually before the 2 seconds are up.
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-    };
-  }, [isOpen]);
+    return () => cancelCloseTimer(); // Cleanup on unmount
+  }, [isOpen, startCloseTimer, cancelCloseTimer]);
 
   // Helper to close everything after a navigation link is clicked
   const handleLinkClick = () => {
@@ -84,6 +99,8 @@ const Header = () => {
       {/* Sliding Sidebar Drawer */}
       <aside
         ref={sidebarRef}
+        onMouseEnter={cancelCloseTimer} // PAUSE timer when mouse enters
+        onMouseLeave={startCloseTimer}  // RESTART timer when mouse leaves
         className={`fixed top-0 left-0 h-screen w-56 bg-[#e3eae7] z-50 flex flex-col pt-24 px-6 shadow-[4px_0_24px_rgba(0,0,0,0.05)] overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
@@ -169,7 +186,7 @@ const Header = () => {
           </div>
 
           <Link 
-            href="/faqs" 
+            href="/faq" 
             onClick={handleLinkClick}
             className="hover:font-bold hover:scale-105 origin-left transition-all w-fit"
           >
