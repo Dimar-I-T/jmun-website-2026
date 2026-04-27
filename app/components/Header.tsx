@@ -65,7 +65,8 @@ const Header = () => {
       {/* Floating Menu Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-8 left-6 z-[60] bg-transparent border-none outline-none cursor-pointer hover:opacity-75 transition-opacity"
+        className="fixed top-8 left-6 z-[60] bg-transparent border-none outline-none cursor-pointer hover:opacity-75 transition-transform origin-top-left"
+        style={{ transform: "scale(var(--mobile-inverse-scale, 1))" }}
         aria-label="Toggle Menu"
       >
         <svg
@@ -101,12 +102,17 @@ const Header = () => {
         ref={sidebarRef}
         onMouseEnter={cancelCloseTimer} // PAUSE timer when mouse enters
         onMouseLeave={startCloseTimer}  // RESTART timer when mouse leaves
-        className={`fixed top-0 left-0 h-screen w-56 bg-[#e3eae7] z-50 flex flex-col pt-24 px-6 shadow-[4px_0_24px_rgba(0,0,0,0.05)] overflow-y-auto transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-screen bg-[#e3eae7] z-50 overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
+        style={{ 
+          width: "calc(14rem * var(--mobile-inverse-scale, 1))",
+          boxShadow: "4px 0 24px rgba(0,0,0,0.05)"
+        }}
       >
-        {/* Vertical Navigation Links */}
-        <nav className="flex flex-col gap-6 font-plus-jakarta text-[#0b4d66] text-xl italic font-medium">
+        <div style={{ zoom: "var(--mobile-inverse-scale, 1)" }} className="flex flex-col pt-24 px-6 w-56 min-h-full pb-10">
+          {/* Vertical Navigation Links */}
+          <nav className="flex flex-col gap-6 font-plus-jakarta text-[#0b4d66] text-xl italic font-medium">
           <Link 
             href="/about" 
             onClick={handleLinkClick}
@@ -193,6 +199,7 @@ const Header = () => {
             FaQ&apos;s
           </Link>
         </nav>
+        </div>
       </aside>
     </>
   );
