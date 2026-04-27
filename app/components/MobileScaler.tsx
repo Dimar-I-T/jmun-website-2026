@@ -38,11 +38,13 @@ export default function MobileViewportOverride() {
         document.head.appendChild(viewportMeta);
       }
       if (deviceWidth < MOBILE_THRESHOLD) {
+        const scale = deviceWidth / DESKTOP_WIDTH;
         viewportMeta.setAttribute(
           "content",
-          `width=${DESKTOP_WIDTH}, initial-scale=${deviceWidth / DESKTOP_WIDTH}, maximum-scale=5, user-scalable=yes`
+          `width=${DESKTOP_WIDTH}, initial-scale=${scale}, maximum-scale=5, user-scalable=yes`
         );
         document.documentElement.setAttribute("data-is-mobile", "true");
+        document.documentElement.style.setProperty("--mobile-inverse-scale", `${1 / scale}`);
       } else {
         viewportMeta.setAttribute(
           "content",

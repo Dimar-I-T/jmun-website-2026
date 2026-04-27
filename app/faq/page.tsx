@@ -5,6 +5,7 @@ import ContactUs from "../components/about/ContactUs"; // Adjust path to whichev
 // IMPORTANT: Update these paths to match where your logos are actually stored
 import jmunText from "@/assets/Jmuntext.svg"; 
 import unLogo from "@/assets/double-logo.png"; 
+import HomeBackground from "@/assets/HomeBackground.png"; // Imported background
 
 export default function FAQPage() {
   const faqs = [
@@ -27,10 +28,22 @@ export default function FAQPage() {
   ];
 
   return (
-    <main className="relative flex flex-col justify-between w-full bg-gradient-to-b from-[#A6DBAB] to-[#045A77] min-h-screen overflow-x-hidden">
+    <main className="relative flex flex-col justify-between w-full min-h-screen overflow-x-hidden">
       
+      {/* Fixed background — locked to viewport, content scrolls over it */}
+      <div className="fixed inset-0 -z-10" aria-hidden="true">
+        <Image
+          src={HomeBackground}
+          alt=""
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0f7f98]/45" />
+      </div>
+
       {/* Top Left Flower Background */}
-      <div className="absolute opacity-50 left-[-13vw] top-[-13vw] z-0 pointer-events-none">
+      <div className="absolute opacity-50 left-[-13vw] top-[-13vw] -z-10 pointer-events-none">
         <Image
           src="/bunga-kiri-atas.png"
           alt="flower decoration"
@@ -42,26 +55,16 @@ export default function FAQPage() {
         />
       </div>
 
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          backgroundImage: "url('/bg-batik.png')",
-          backgroundRepeat: "repeat-y",
-          backgroundSize: "100% auto",
-          backgroundPosition: "top center"
-        }}
-      />
-
       <div className="w-full flex items-start justify-between px-6 py-8 md:px-12 relative z-10">
         
         {/* Left Logos */}
-        <div className="flex items-center gap-2 md:gap-3">
-          <Image src={jmunText} alt="JMUN Text" className="w-32 md:w-48 h-auto" />
+        <div className="flex items-center gap-2 md:gap-3 ml-10 md:ml-12">
+          <Image src={jmunText} alt="JMUN Text" className="w-32 md:w-48 h-auto drop-shadow-sm" />
         </div>
 
         {/* Right Logos & Text */}
         <div className="hidden md:flex items-center gap-3">
-          <div className="flex flex-col text-white tracking-widest text-[10px] md:text-xs font-semibold mr-2 text-right opacity-90">
+          <div className="flex flex-col text-white tracking-widest text-[10px] md:text-xs font-semibold mr-2 text-right opacity-90 drop-shadow-sm">
             <span>INDONESIAN STUDENT ASSOCIATION</span>
             <span>FOR INTERNATIONAL STUDIES</span>
           </div>
@@ -78,13 +81,13 @@ export default function FAQPage() {
 
       <div className="w-full flex grow flex-col items-center justify-start px-6 md:px-12 py-8 z-10">
         
-        <h1 className="text-[#0b4d66] text-5xl md:text-7xl font-bold text-center mb-12 font-serif tracking-wide">
+        <h1 className="text-[#0b4d66] text-5xl md:text-7xl font-bold text-center mb-12 font-serif tracking-wide drop-shadow-md">
           Frequently Asked Questions
         </h1>
 
         <div className="w-full max-w-4xl flex flex-col gap-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="flex flex-col gap-1 text-white font-plus-jakarta text-lg md:text-2xl leading-snug">
+            <div key={index} className="flex flex-col gap-1 text-white font-plus-jakarta text-lg md:text-2xl leading-snug drop-shadow-md">
               <p>{faq.q}</p>
               <p>{faq.a}</p>
             </div>
@@ -94,7 +97,7 @@ export default function FAQPage() {
       </div>
 
       <div className="w-full relative z-10 mt-auto">
-      <div className="border-b-2 border-white"></div>
+        <div className="border-b-2 border-white"></div>
         <ContactUs />
       </div>
     </main>

@@ -26,7 +26,7 @@ const Header = () => {
 
   // Helper to start the countdown
   const startCloseTimer = useCallback(() => {
-    // Disable auto-close entirely on mobile and tablet screens (under 1024px)
+    // Absolutely disable auto-close entirely on mobile and tablet screens (under 1024px)
     if (typeof window !== "undefined" && window.innerWidth < 1024) {
       return;
     }
@@ -37,9 +37,9 @@ const Header = () => {
     }, 1000);
   }, [cancelCloseTimer]);
 
-  // 1. Click-outside handler
+  // Click/Touch-outside handler
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       // Make sure we aren't clicking inside the sidebar AND aren't clicking the toggle button
       if (
         sidebarRef.current && 
@@ -50,17 +50,22 @@ const Header = () => {
         setIsOpen(false);
       }
     }
+    
+    // Listening to both mouse clicks and mobile taps
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
-  // 2. Manage the timer automatically when `isOpen` state changes
+  // Manage the timer automatically when `isOpen` state changes
   useEffect(() => {
     if (isOpen) {
-      // Start the countdown when it opens...
       startCloseTimer();
     } else {
-      // Clean up the timer if it gets closed manually or via click-outside
       cancelCloseTimer();
     }
 
@@ -111,17 +116,17 @@ const Header = () => {
         aria-hidden="true"
       />
 
-      {/* Sliding Sidebar Drawer */}
+      {/* Sliding Sidebar Drawer - Scaler hacks removed! */}
       <aside
         ref={sidebarRef}
-        onMouseEnter={cancelCloseTimer} // PAUSE timer when mouse enters sidebar
-        onMouseLeave={startCloseTimer}  // RESTART timer when mouse leaves sidebar
+        onMouseEnter={cancelCloseTimer} // PAUSE timer when mouse enters
+        onMouseLeave={startCloseTimer}  // RESTART timer when mouse leaves
         className={`fixed top-0 left-0 h-screen w-56 bg-[#e3eae7] z-50 flex flex-col pt-24 px-6 shadow-[4px_0_24px_rgba(0,0,0,0.05)] overflow-y-auto transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Vertical Navigation Links */}
-        <nav className="flex flex-col gap-6 font-plus-jakarta text-[#0b4d66] text-xl italic font-medium">
+        <nav className="flex flex-col gap-6 font-plus-jakarta text-[#0b4d66] text-xl italic font-medium pb-10">
           
           <Link 
             href="/" 
