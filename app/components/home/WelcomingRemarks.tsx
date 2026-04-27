@@ -10,37 +10,37 @@ function WelcomingRemarks() {
         <div className="absolute inset-0 z-0 pointer-events-none" />
 
         <div className="relative w-full h-auto max-sm:mt-[-25px] z-10">
-          <div className="relative w-full h-auto bg-white/50 rounded-4xl flex flex-col pt-3 px-13 pb-5 max-md:px-6 scale-90">
+          <div className="relative w-full h-auto bg-white/50 rounded-4xl flex flex-col pt-3 px-6 md:px-13 pb-5 scale-[0.92] md:scale-90">
             <Image
               src="/bunga-kanan-atas.png"
               alt="logo"
               width={920}
               height={863}
-              className="absolute w-[15.625vw] aspect-[863/960] top-[-6vw] left-[-3vw] rotate-90 -scale-y-100"
+              className="absolute w-[35vw] md:w-[15.625vw] aspect-[863/960] top-[-8vw] md:top-[-6vw] left-[-5vw] md:left-[-3vw] rotate-90 -scale-y-100"
               priority
               unoptimized
             />
 
             <div className="flex flex-col lg:flex-row items-center lg:items-center gap-6 mt-6 lg:mt-2">
               <div className="flex-1 order-2 lg:order-1">
-                <h1 className="text-[55px] max-md:text-[40px] md:mb-[-10px] font-bold text-biru-3 font-bodoni">
+                <h1 className="text-[24px] md:text-[55px] md:mb-[-10px] font-bold text-biru-3 font-bodoni">
                   Secretary General Remarks
                 </h1>
-                <p className="text-[20px] max-md:text-[14px] text-justify font-light text-biru-3 font-montserrat leading-tight pr-5">
+                <p className="text-[12px] md:text-[20px] text-justify font-light text-biru-3 font-montserrat leading-tight pr-0 md:pr-5">
                   Dearest future delegates,
                   <br /><br />
-                  It is with my greatest honor to present to you Jakarta International Model United Nations’ 16th conference. With 100+ hardworking committee members, 12 councils, and rooms ready to hold delegates and chairs with a drive for diplomacy, our conference this year highlights the path to tranquility, and our quest to restore it and take action in the present.
+                  It is with my greatest honor to present to you Jakarta International Model United Nations' 16th conference. With 100+ hardworking committee members, 12 councils, and rooms ready to hold delegates and chairs with a drive for diplomacy, our conference this year highlights the path to tranquility, and our quest to restore it and take action in the present.
                   <br /><br />
                   Through our grand theme, we open a space for all students interested in diplomacy to start that path towards restoring the blueprint. Through councils that discuss artist autonomy, ownership of culture, and digital privacy, JMUN 2026 opens doorways for beginner to advanced delegates alike to take part in that restoration.
                   <br /><br />
-                  Upholding our prestige and outstanding quality, this year’s conference is set to be done better than ever. And with great pride, and on behalf of my committee, we are ready to prepare that stage.
+                  Upholding our prestige and outstanding quality, this year's conference is set to be done better than ever. And with great pride, and on behalf of my committee, we are ready to prepare that stage.
                   <br /><br />
                   Best Regards,
                   <br />
                   Flicka Miracle Simarmata
                 </p>
               </div>
-              <div className="w-[80%] lg:w-[280px] xl:w-[300px] shrink-0 order-1 lg:order-2">
+              <div className="w-[45%] md:w-[80%] lg:w-[280px] xl:w-[300px] shrink-0 order-1 lg:order-2">
                 <Image
                   src={secgen2026}
                   alt="Secretary General"

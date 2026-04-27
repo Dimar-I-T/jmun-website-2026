@@ -9,11 +9,11 @@ interface ContactUsProps {
 const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
   return (
     <footer
-      className={`w-full ${className} flex flex-col items-center justify-start px-8 lg:px-0 pb-10`}
+      className={`w-full ${className} flex flex-col items-center justify-start px-4 md:px-8 lg:px-0 pb-10`}
     >
       {/* City skyline banner with contact us text */}
-      <div className="relative w-full overflow-hidden pt-16 md:pt-20">
-        <h2 className="font-bodoni font-bold text-5xl md:text-7xl text-biru-3 text-center pb-8">
+      <div className="relative w-full overflow-hidden pt-12 md:pt-20">
+        <h2 className="font-bodoni font-bold text-4xl md:text-7xl text-biru-3 text-center pb-6 md:pb-8">
           Contact Us
         </h2>
       </div>
@@ -22,41 +22,41 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
       <div className="w-full text-white">
         <div className="container mx-auto px-4">
           {/* Contact categories */}
-          <div className="flex flex-col gap-8 md:gap-8 text-center font-light font-montserrat">
+          <div className="flex flex-col gap-6 md:gap-8 text-center font-light font-montserrat">
             <div>
-              <h3 className="md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-xl">
+              <h3 className="text-lg md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl">
                 General Queries
               </h3>
               <a
                 href="mailto:jakartamun@gmail.com"
                 target="_blank"
-                className="text-white text-base md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
+                className="text-white text-sm md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
               >
                 jakartamun@gmail.com
               </a>
             </div>
 
             <div>
-              <h3 className="md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-xl">
+              <h3 className="text-lg md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl">
                 Sponsorship
               </h3>
               <a
                 href="mailto:jakartamun@isafis.or.id"
                 target="_blank"
-                className="text-white text-base md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
+                className="text-white text-sm md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
               >
                 businessaffairs.jmun@gmail.com
               </a>
             </div>
 
             <div>
-              <h3 className="md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl text-xl">
+              <h3 className="text-lg md:text-5xl mb-1 md:mb-2 bg-clip-text bg-gradient-to-b from-white to-soft-beige drop-shadow-2xl">
                 Media Partnership
               </h3>
               <a
                 href="mailto:publicaffairs.jmun@isafis.or.id"
                 target="_blank"
-                className="text-white text-base md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
+                className="text-white text-sm md:text-2xl underline hover:text-soft-beige transition-colors duration-300"
               >
                 publicaffairs.jmun@isafis.or.id
               </a>
@@ -64,56 +64,56 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
           </div>
 
           {/* Social media section */}
-          <div className="text-center pt-16 md:pt-20 font-plus-jakarta">
-            <h2 className="font-bodoni font-bold text-5xl md:text-7xl text-biru-3 text-center pb-3">
+          <div className="text-center pt-12 md:pt-20 font-plus-jakarta">
+            <h2 className="font-bodoni font-bold text-4xl md:text-7xl text-biru-3 text-center pb-3">
               Social Media
             </h2>
-            <div className="flex justify-center space-x-8">
+            <div className="flex justify-center space-x-4 md:space-x-8">
               <a
                 href="https://www.instagram.com/jakartamun/"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
-                <FaInstagram className="text-7xl" />
+                <FaInstagram className="text-4xl md:text-7xl" />
               </a>
               <a
                 href="https://twitter.com/jakartamun"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
-                <FaXTwitter className="text-7xl" />
+                <FaXTwitter className="text-4xl md:text-7xl" />
               </a>
               <a
                 href="https://www.tiktok.com/@jakartamun"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
-                <FaTiktok className="text-7xl" />
+                <FaTiktok className="text-4xl md:text-7xl" />
               </a>
               <a
                 href="https://www.facebook.com/jakartamun"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
-                <FaFacebook className="text-7xl" />
+                <FaFacebook className="text-4xl md:text-7xl" />
               </a>
               <a
                 href="https://www.linkedin.com/company/jakartamun/"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
-                <FaLinkedin className="text-7xl" />
+                <FaLinkedin className="text-4xl md:text-7xl" />
               </a>
             </div>
           </div>
 
           {/* Location */}
-          <div className="text-center pt-16 md:pt-20">
-            <h2 className="font-bodoni font-bold text-5xl md:text-7xl text-biru-3 text-center pb-3">
+          <div className="text-center pt-12 md:pt-20">
+            <h2 className="font-bodoni font-bold text-4xl md:text-7xl text-biru-3 text-center pb-3">
               Location
             </h2>
-            <div className="mt-2 text-center text-white text-center text-sm md:text-base font-light font-montserrat italic leading-relaxed px-4">
-              <p className="mx-auto w-160 leading-tight">
+            <div className="mt-2 text-center text-white text-xs md:text-base font-light font-montserrat italic leading-relaxed px-4">
+              <p className="mx-auto max-w-[90vw] md:w-160 leading-tight">
                 Jl. Joe Klp. Tiga No. 56, RT. 07/RW. 03, Lenteng Agung, Kec.Jagakarsa, Kota Jakarta Selatan, DKI Jakarta, 12250.
               </p>
               <p className="mt-2">

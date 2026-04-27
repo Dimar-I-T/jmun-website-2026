@@ -24,12 +24,12 @@ const carouselPhotos = [
 
 function GallerySection() {
   return (
-    <section className="w-full flex flex-col items-start justify-start px-20 pt-16 md:pt-20 gap-6 scale-93">
-      <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8 px-8">
-        <h2 className="font-bodoni font-bold text-5xl md:text-7xl text-biru-3">
+    <section className="w-full flex flex-col items-start justify-start px-6 md:px-20 pt-16 md:pt-20 gap-6 md:scale-93">
+      <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8 px-2 md:px-8">
+        <h2 className="font-bodoni font-bold text-4xl md:text-7xl text-biru-3">
           Past JMUN
         </h2>
-        <p className="font-montserrat italic text-base md:text-xl text-biru-3">
+        <p className="font-montserrat italic text-sm md:text-xl text-biru-3">
           See the excitement of the previous JMUN series of events
         </p>
       </div>
