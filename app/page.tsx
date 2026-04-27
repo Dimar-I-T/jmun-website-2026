@@ -10,7 +10,7 @@ import HomeBackground from "@/assets/HomeBackground.png";
 import heroTitle from "@/assets/HeroTitle.svg";
 import patungDirgantara from "@/assets/PatungDirgantara.svg";
 import EllipseKuning from "@/assets/EllipseKuning.png";
-import MobileViewportOverride from "./components/MobileScaler";
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,8 +21,6 @@ const montserrat = Montserrat({
 function HomePage() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center justify-start">
-      {/* Override viewport on mobile to force desktop layout */}
-      <MobileViewportOverride />
 
       {/* Fixed background — locked to viewport, content scrolls over it */}
       <div className="fixed inset-0 -z-10" aria-hidden="true">
@@ -37,12 +35,12 @@ function HomePage() {
       </div>
 
       <section
-        className={`relative w-full min-h-[700px] ${montserrat.className}`}
+        className={`relative w-full min-h-[350px] md:min-h-[700px] ${montserrat.className}`}
       >
 
-        <div className="relative z-10 w-full min-h-[725px] px-4 sm:px-6 md:px-12 sm:pt-1 md:pt-28 flex flex-col items-center justify-center">
+        <div className="relative z-10 w-full min-h-[350px] md:min-h-[725px] px-4 sm:px-6 md:px-12 pt-8 md:pt-15 flex flex-col items-center justify-center">
 
-          <div className="w-[1100px] lg:w-full max-w-[1250px] flex flex-col items-center">
+          <div className="w-full max-w-[1250px] flex flex-col items-center">
 
             <div className="absolute opacity-50 left-[-13vw] top-[-13vw] -z-10">
               <Image
@@ -55,18 +53,18 @@ function HomePage() {
                 unoptimized
               />
             </div>
-            <div className="w-full rounded-[1.75rem] md:rounded-[2.25rem] bg-white/50 px-5 py-12 [clip-path:inset(-100vw_-100vw_0_-100vw)] scale-100 [[data-is-mobile=true]_&]:scale-95">
-              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-9 md:gap-5">
+            <div className="w-full rounded-[1.75rem] md:rounded-[2.25rem] bg-white/50 px-3 md:px-5 py-6 md:py-12 [clip-path:inset(-100vw_-100vw_0_-100vw)]">
+              <div className="grid grid-cols-[3fr_1fr] md:grid-cols-2 items-center gap-2 md:gap-5">
 
-                <div className="flex flex-col items-start justify-center">
+                <div className="flex flex-col items-start justify-center min-w-0">
                   <Image
                     src={heroTitle}
                     alt="Jakarta International Model United Nations 2026"
                     priority
-                    className="max-w-none sm:w-[250px] md:w-[500px] lg:w-[700px] h-auto"
+                    className="max-w-none w-[58vw] md:w-[500px] lg:w-[700px] h-auto"
                   />
-                  <div className="ml-29">
-                    <p className="mt-1 md:mt-2 text-[#025470] italic font-light leading-tight text-base md:text-lg lg:text-[28px] w-[650px]">
+                  <div className="ml-1 sm:ml-4 md:ml-29">
+                    <p className="mt-1 md:mt-2 text-[#025470] italic font-light leading-tight text-[11px] sm:text-sm md:text-lg lg:text-[28px] w-[65vw] md:w-[650px]">
                       Restoring the Path to Tranquility: Reconstructing the
                       Blueprint of Peace and Justice Within the Global
                       Architecture
@@ -74,14 +72,14 @@ function HomePage() {
 
                     <Link
                       href="/registration"
-                      className="mt-2 md:mt-4 inline-flex items-center justify-center rounded-[20px] bg-[#025470] px-8 py-4 text-white font-bold text-md md:text-lg tracking-[0.04em] uppercase hover:brightness-110 transition-all"
+                      className="mt-2 md:mt-4 inline-flex items-center justify-center rounded-[10px] md:rounded-[20px] bg-[#025470] px-3 py-1.5 md:px-8 md:py-4 text-white font-bold text-[10px] md:text-lg tracking-[0.04em] uppercase hover:brightness-110 transition-all"
                     >
                       Register Now
                     </Link>
                   </div>
                 </div>
 
-                <div className="w-full flex items-center justify-center md:justify-end ml-20 -mb-40">
+                <div className="w-full flex items-center justify-center md:justify-end md:ml-20 self-start md:self-center md:-mb-40">
                   <div className="relative">
                     <Image
                       src={EllipseKuning}
@@ -92,7 +90,7 @@ function HomePage() {
                       src={patungDirgantara}
                       alt="Patung Dirgantara illustration"
                       priority
-                      className="max-w-none sm:w-[70px] md:w-[150px] lg:w-[520px] h-auto object-contain scale-x-[-1]"
+                      className="max-w-none w-[28vw] md:w-[150px] lg:w-[520px] h-auto object-contain scale-x-[-1]"
                     />
                   </div>
                 </div>
