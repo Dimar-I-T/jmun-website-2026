@@ -45,7 +45,7 @@ function HomePage() {
             <div className="absolute opacity-50 left-[-13vw] top-[-13vw] -z-10">
               <Image
                 src="/bunga-kiri-atas.png"
-                alt="logo"
+                alt="decoration"
                 width={1783}
                 height={2072}
                 className="w-[58vw] aspect-[1783/2072]"

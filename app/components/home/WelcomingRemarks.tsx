@@ -13,7 +13,7 @@ function WelcomingRemarks() {
           <div className="relative w-full h-auto bg-white/50 rounded-4xl flex flex-col pt-3 px-6 md:px-13 pb-5 scale-[0.92] md:scale-90">
             <Image
               src="/bunga-kanan-atas.png"
-              alt="logo"
+              alt="decoration"
               width={920}
               height={863}
               className="absolute w-[35vw] md:w-[15.625vw] aspect-[863/960] top-[-8vw] md:top-[-6vw] left-[-5vw] md:left-[-3vw] rotate-90 -scale-y-100"
