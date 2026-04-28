@@ -10,7 +10,7 @@ function AboutPage() {
       <div className="absolute opacity-50 left-[-13vw] top-[-13vw] z-10">
         <Image
           src="/bunga-kiri-atas.png"
-          alt="logo"
+          alt="decoration"
           width={1783}
           height={2072}
           className="w-[68.292vw] aspect-[1783/2072]"
@@ -34,7 +34,7 @@ function AboutPage() {
         <div className="relative w-full h-auto bg-biru-1/65 rounded-4xl flex flex-col pt-3 px-12 pb-5 max-md:px-6 scale-90">
           <Image
             src="/bunga-kanan-atas.png"
-            alt="logo"
+            alt="decoration"
             width={920}
             height={863}
             className="absolute w-[15.625vw] aspect-[863/960] top-[-4vw] right-[-3vw] rotate-90"
