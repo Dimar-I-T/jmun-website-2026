@@ -137,8 +137,8 @@ export const councils: Council[] = [
     logo: eucoLogo,
     topic:
       "Autonomy or Dependence? Justice and Power Asymmetries in Europe's Strategic Relationship with NATO",
-    participant: "single",
-    level: "beginner",
+    participant: "double",
+    level: "advanced",
     location: "online",
     description:
       "Europe's security has long been intertwined with NATO, an alliance that has provided collective defense and stability for decades. Yet the rise of new geopolitical challenges, shifting U.S. foreign policy priorities, and internal divisions within the continent have sparked debate over how dependent European nations should remain on the alliance. Some countries emphasize the need for continued reliance on NATO to guarantee security and deter aggression, while others advocate for greater strategic autonomy, investing in independent defense capabilities and regional cooperation. Delegates must navigate these competing perspectives to negotiate frameworks that balance collective security, national sovereignty, and Europe's role in global geopolitics.",
