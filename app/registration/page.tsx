@@ -102,13 +102,11 @@ function RegistrationPage() {
 
         <div className="w-full max-w-3xl flex flex-col items-center mb-16">
           <h2 className="text-[#0b4d66] text-5xl md:text-7xl font-bold text-center mb-4 font-serif tracking-wide">
-            Social Night
+            Social Packages
           </h2>
 
           <p className="text-white text-lg md:text-xl leading-relaxed text-center mb-8 font-medium font-plus-jakarta px-4">
-            JMUN social night is way for everyone-not only delegates to
-            participate in JMUN's one of a series of events. This package
-            is a call for everyone who wishes to engage in JMUN's socials.
+            JMUN’s social package is way for everyone-not only delegates to participate in JMUN's series of events. This package is a call for everyone who wishes to engage in JMUN's social events.
           </p>
 
           <div className="w-full max-w-md">
