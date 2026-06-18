@@ -100,8 +100,7 @@ function RegistrationPage() {
           </div>
         </div>
 
-        {/* Social Night Section (Hidden dlu, nanti ubah jadi flex kalau udh ada*/}
-        <div className="w-full max-w-3xl hidden flex-col items-center mb-16">
+        <div className="w-full max-w-3xl flex flex-col items-center mb-16">
           <h2 className="text-[#0b4d66] text-5xl md:text-7xl font-bold text-center mb-4 font-serif tracking-wide">
             Social Night
           </h2>
@@ -115,7 +114,7 @@ function RegistrationPage() {
           <div className="w-full max-w-md">
             <RegistrationButton
               text="Buy JMUN Social Package"
-              href="https://bit.ly/JMUN2025SocialPacksPurchaseForm"
+              href="https://bit.ly/JMUN2026SocialPackages"
             />
           </div>
         </div>
