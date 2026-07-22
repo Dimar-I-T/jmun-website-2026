@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaMedium, FaMediumM, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 interface ContactUsProps {
@@ -69,7 +69,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
               Social Media
             </h2>
             {/* Added flex-wrap, reduced mobile gap, and responsive icon sizes */}
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-2">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mt-2">
               <a
                 href="https://www.instagram.com/jakartamun/"
                 target="_blank"
@@ -85,7 +85,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
                 <FaXTwitter className="text-4xl md:text-7xl" />
               </a>
               <a
-                href="https://www.tiktok.com/@jakartamun"
+                href="https://www.tiktok.com/@jakartamun2026"
                 target="_blank"
                 className="text-white hover:text-gray-200 transition-colors"
               >
@@ -104,6 +104,13 @@ const ContactUs: React.FC<ContactUsProps> = ({ className = "" }) => {
                 className="text-white hover:text-gray-200 transition-colors"
               >
                 <FaLinkedin className="text-4xl md:text-7xl" />
+              </a>
+              <a
+                href="https://medium.com/@acads.jmun"
+                target="_blank"
+                className="text-white hover:text-gray-200 transition-colors"
+              >
+                <img src="/medium-icon.png" className="object-fill size-[31.5px] md:size-[63px]" />
               </a>
             </div>
           </div>
