@@ -215,6 +215,14 @@ const Header = () => {
           </div>
 
           <Link 
+            href="/venues" 
+            onClick={handleLinkClick}
+            className="hover:font-bold hover:scale-105 origin-left transition-all w-fit"
+          >
+            Venues
+          </Link>
+
+          <Link 
             href="/faq" 
             onClick={handleLinkClick}
             className="hover:font-bold hover:scale-105 origin-left transition-all w-fit"
