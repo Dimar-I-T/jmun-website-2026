@@ -2,6 +2,7 @@ import Image from "next/image";
 import ContactUs from "../components/about/ContactUs"; // Adjust path to whichever ContactUs you decided to use
 import HomeBackground from "@/assets/HomeBackground.png"; 
 import VenuesGallerySection from "../components/venues/VenuesGallerySection";
+import Sponsors from "../components/home/Sponsors";
 
 export default function FAQPage() {
   return (
@@ -35,6 +36,7 @@ export default function FAQPage() {
 
       <div className="w-full relative z-10 mt-auto">
         <div className="border-b-2 border-white"></div>
+        <Sponsors />
         <ContactUs />
       </div>
     </main>

@@ -5,6 +5,7 @@ import HomeBackground from "@/assets/HomeBackground.png";
 import { changeDelimiter } from "@/utils";
 import ContactUs from "../components/about/ContactUs";
 import Image from "next/image";
+import Sponsors from "../components/home/Sponsors";
 
 function CouncilsPage() {
   const onlineCouncils = councils.filter(
@@ -83,6 +84,7 @@ function CouncilsPage() {
         </div>
 
         <div className="border-b-2 border-white"></div>
+        <Sponsors />
         <ContactUs />
       </div>
     </section>
