@@ -2,6 +2,7 @@ import React from "react";
 import ContactUs from "../components/about/ContactUs";
 import Image from "next/image";
 import HomeBackground from "@/assets/HomeBackground.png";
+import Sponsors from "../components/home/Sponsors";
 
 function AboutPage() {
   return (
@@ -62,6 +63,7 @@ function AboutPage() {
         </div>
       </div>
 
+      <Sponsors />
       <ContactUs />
     </main>
   );

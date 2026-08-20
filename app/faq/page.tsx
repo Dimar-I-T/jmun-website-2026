@@ -6,6 +6,7 @@ import ContactUs from "../components/about/ContactUs"; // Adjust path to whichev
 import jmunText from "@/assets/Jmuntext.svg"; 
 import unLogo from "@/assets/double-logo.png"; 
 import HomeBackground from "@/assets/HomeBackground.png"; // Imported background
+import Sponsors from "../components/home/Sponsors";
 
 export default function FAQPage() {
   const faqs = [
@@ -98,6 +99,7 @@ export default function FAQPage() {
 
       <div className="w-full relative z-10 mt-auto">
         <div className="border-b-2 border-white"></div>
+        <Sponsors />
         <ContactUs />
       </div>
     </main>
